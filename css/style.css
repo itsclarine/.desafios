@@ -42,7 +42,7 @@ main .personagem .imagem{
     z-index: 1; /*controla a ordem das camadas: 1(fundo) - 3(frente)*/
 }
 
-.nome-personagem{
+.conteudo .nome-personagem{
     color: #ffffff;
     font-size: 48px;
     font-family: 'Secular One', sans-serif;
