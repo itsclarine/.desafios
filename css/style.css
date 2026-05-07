@@ -2,6 +2,7 @@
 
 body{
     background-color: #000000;
+    overflow: hidden;
 }
 
 main::after{ /*efeito na página*/
@@ -11,6 +12,47 @@ main::after{ /*efeito na página*/
     left: 0;
     min-height: 100vh;
     width: 80vh;
-    background: linear-gradient 92deg, #000000 25%, rgba(0,0,0,0) 75%;
-
+    background: linear-gradient(92deg, #000000 25%, rgba(0,0,0,0) 75%) no-repeat; /*efeito de sombra/borda escura */
 }
+
+main .personagens{
+    display: none;
+    height: 100vh;
+}
+
+main .personagem .selecionado{
+    display: block;
+}
+
+main .personagem .imagem{
+    width: 100%;
+    height: 100%;
+    object-fit: cover ; /*como a imagem vai se comportar na tela - cover: imagem vai ocupar todo espaço*/
+}
+
+.conteudo{
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    max-width: 380px;
+    z-index: 1; /*controla a ordem das camadas: 1(fundo) - 3(frente)*/
+}
+
+.nome-personagem{
+    color: #ffffff;
+    font-size: 48px;
+    font-family: 'Secular One', sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.conteudo .descricao{
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 25px;
+}    
